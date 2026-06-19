@@ -1,0 +1,152 @@
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - generic [ref=e6]:
+      - button [ref=e7]:
+        - img [ref=e8]
+      - generic [ref=e10]: 个人简历
+    - generic [ref=e11]:
+      - navigation [ref=e12]:
+        - button "主页" [ref=e13]: 主页
+        - button "项目" [ref=e15]
+        - button "经历" [ref=e16]
+        - button "博客" [ref=e17]
+        - button "相册" [ref=e18]
+      - button [ref=e19]:
+        - img [ref=e20]
+        - img [ref=e23]
+  - generic [ref=e26]:
+    - complementary [ref=e27]:
+      - generic [ref=e28]:
+        - img "avatar" [ref=e30]
+        - heading "wttAndroid|" [level=2] [ref=e31]
+        - paragraph [ref=e32]: 全栈开发者 / 技术爱好者
+        - generic [ref=e34]:
+          - link "GitHub" [ref=e35] [cursor=pointer]:
+            - /url: https://github.com
+            - img [ref=e36]
+          - link "Gitee" [ref=e38] [cursor=pointer]:
+            - /url: https://gitee.com
+            - img [ref=e39]
+          - link "WeChat" [ref=e41] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e42]
+          - link "Email" [ref=e44] [cursor=pointer]:
+            - /url: mailto:wtt@example.com
+            - img [ref=e45]
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - generic [ref=e50]: 毕业院校
+            - generic [ref=e51]: 揭阳职业技术学院
+          - generic [ref=e52]:
+            - generic [ref=e53]: 所在城市
+            - generic [ref=e54]: 广东揭阳
+          - generic [ref=e55]:
+            - generic [ref=e56]: 出生年份
+            - generic [ref=e57]: 2006年
+          - generic [ref=e58]:
+            - generic [ref=e59]: 当前身份
+            - generic [ref=e60]: 在校学生
+          - generic [ref=e61]:
+            - generic [ref=e62]: 技术方向
+            - generic [ref=e63]: 大前端全栈
+        - link "联系我" [ref=e64] [cursor=pointer]:
+          - /url: mailto:wtt@example.com
+        - paragraph [ref=e65]: © 2026 wttAndroid.space
+    - main [ref=e66]:
+      - generic [ref=e67]:
+        - generic [ref=e68]:
+          - generic [ref=e74]:
+            - paragraph [ref=e75]: "> hello_world.exe"
+            - heading "你好，我是 wttAndroid" [level=1] [ref=e76]
+            - paragraph [ref=e77]: 热爱技术的全栈开发者 / 专注于构建优雅、高性能的 Web 应用
+          - generic [ref=e78]:
+            - generic [ref=e80] [cursor=pointer]:
+              - text: 🚀
+              - generic [ref=e81]: 0+
+              - generic [ref=e82]: 完成项目
+            - generic [ref=e84] [cursor=pointer]:
+              - text: 💼
+              - generic [ref=e85]: 0+
+              - generic [ref=e86]: 年经验
+            - generic [ref=e88] [cursor=pointer]:
+              - text: 📝
+              - generic [ref=e89]: 0+
+              - generic [ref=e90]: 技术文章
+        - generic [ref=e91]:
+          - generic [ref=e92]:
+            - generic [ref=e93]: 我的能力
+            - generic [ref=e95]: "03"
+          - generic [ref=e96]:
+            - generic [ref=e97] [cursor=pointer]:
+              - generic [ref=e98]:
+                - img [ref=e99]
+                - heading "UI 设计" [level=3] [ref=e101]
+                - paragraph [ref=e102]: 用户界面的美学构造 / 交互原型设计
+                - generic [ref=e103]:
+                  - generic [ref=e104]: Figma 视觉设计
+                  - generic [ref=e105]: 组件库搭建
+                  - generic [ref=e106]: 动效与原型
+              - link "ORDER NOW" [ref=e107]:
+                - /url: "#"
+                - text: ORDER NOW
+                - img [ref=e108]
+            - generic [ref=e110] [cursor=pointer]:
+              - generic [ref=e111]:
+                - img [ref=e112]
+                - heading "网页制作" [level=3] [ref=e114]
+                - paragraph [ref=e115]: Vue 3 & React 的现代化实现
+                - generic [ref=e116]:
+                  - generic [ref=e117]: Vue3 / NuxtJS
+                  - generic [ref=e118]: TypeScript
+                  - generic [ref=e119]: Tailwind CSS
+              - link "ORDER NOW" [ref=e120]:
+                - /url: "#"
+                - text: ORDER NOW
+                - img [ref=e121]
+            - generic [ref=e123] [cursor=pointer]:
+              - generic [ref=e124]:
+                - img [ref=e125]
+                - heading "后端开发" [level=3] [ref=e127]
+                - paragraph [ref=e128]: 高性能 API 与服务端搭建
+                - generic [ref=e129]:
+                  - generic [ref=e130]: Node.js / Fastify
+                  - generic [ref=e131]: PostgreSQL
+                  - generic [ref=e132]: Redis 缓存
+              - link "ORDER NOW" [ref=e133]:
+                - /url: "#"
+                - text: ORDER NOW
+                - img [ref=e134]
+            - generic [ref=e136] [cursor=pointer]:
+              - generic [ref=e137]:
+                - img [ref=e138]
+                - heading "全栈方案" [level=3] [ref=e140]
+                - paragraph [ref=e141]: 端到端项目交付与部署
+                - generic [ref=e142]:
+                  - generic [ref=e143]: CI/CD 流水线
+                  - generic [ref=e144]: Docker 容器化
+                  - generic [ref=e145]: 云服务器运维
+              - link "ORDER NOW" [ref=e146]:
+                - /url: "#"
+                - text: ORDER NOW
+                - img [ref=e147]
+        - generic [ref=e149]:
+          - generic [ref=e150]:
+            - generic [ref=e151]: 最近案例
+            - generic [ref=e153]: "04"
+          - generic [ref=e154]:
+            - generic [ref=e158] [cursor=pointer]:
+              - generic [ref=e159]:
+                - heading "电商平台重构" [level=3] [ref=e160]
+                - generic [ref=e161]: 精选
+              - paragraph [ref=e162]: 使用 Vue 3 + Pinia 重构老旧的 jQuery 电商平台，性能提升 60%，用户转化率增长 25%。
+              - text: Vue 3 / Pinia / Tailwind CSS
+            - generic [ref=e166] [cursor=pointer]:
+              - heading "实时数据看板" [level=3] [ref=e168]
+              - paragraph [ref=e169]: 基于 WebSocket 的实时数据可视化仪表盘，支持百万级数据流畅渲染。
+              - text: React / D3.js / WebSocket
+            - generic [ref=e173] [cursor=pointer]:
+              - heading "移动端跨平台 App" [level=3] [ref=e175]
+              - paragraph [ref=e176]: 使用 uni-app 构建的跨平台移动应用，已上线 App Store 与各大安卓市场。
+              - text: uni-app / Vue 3 / Node.js
+          - link "查看全部案例 →" [ref=e178] [cursor=pointer]:
+            - /url: /projects

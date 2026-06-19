@@ -1,0 +1,62 @@
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - generic [ref=e6]:
+      - link [ref=e7] [cursor=pointer]:
+        - /url: /
+        - img [ref=e8]
+      - generic [ref=e10]: 个人简历
+    - generic [ref=e11]:
+      - navigation [ref=e12]:
+        - link "主页" [ref=e13] [cursor=pointer]:
+          - /url: /
+          - text: 主页
+        - link "项目" [ref=e15] [cursor=pointer]:
+          - /url: /projects
+        - link "经历" [ref=e16] [cursor=pointer]:
+          - /url: /experience
+        - link "开源" [ref=e17] [cursor=pointer]:
+          - /url: /blog
+        - link "相册" [ref=e18] [cursor=pointer]:
+          - /url: /gallery
+      - button [ref=e19]:
+        - img [ref=e20]
+        - img [ref=e23]
+  - generic [ref=e26]:
+    - complementary [ref=e27]:
+      - generic [ref=e28]:
+        - img "aishaliwen" [ref=e30]
+        - heading "aishaliwen|" [level=2] [ref=e31]
+        - paragraph [ref=e32]: 嵌入式系统 / 物联网 / 边缘 AI 开发者
+        - generic [ref=e34]:
+          - link "GitHub" [ref=e35] [cursor=pointer]:
+            - /url: https://github.com/aishaliwen99
+            - img [ref=e36]
+          - link "Gitee" [ref=e38] [cursor=pointer]:
+            - /url: https://gitee.com/aishaliwen
+            - img [ref=e39]
+          - link "WeChat" [ref=e41] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e42]
+          - link "Email" [ref=e44] [cursor=pointer]:
+            - /url: mailto:aishaliwen@example.com
+            - img [ref=e45]
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - generic [ref=e50]: 技术方向
+            - generic [ref=e51]: 嵌入式 & 边缘AI
+          - generic [ref=e52]:
+            - generic [ref=e53]: 所在城市
+            - generic [ref=e54]: 广东深圳
+          - generic [ref=e55]:
+            - generic [ref=e56]: 当前身份
+            - generic [ref=e57]: 嵌入式开发者
+          - generic [ref=e58]:
+            - generic [ref=e59]: 核心技能
+            - generic [ref=e60]: C / RTOS / IoT
+          - generic [ref=e61]:
+            - generic [ref=e62]: 开源贡献
+            - generic [ref=e63]: 8+ 仓库活跃
+        - link "联系我" [ref=e64] [cursor=pointer]:
+          - /url: mailto:aishaliwen@example.com
+        - paragraph [ref=e65]: © 2026 aishaliwen.tech
+    - main [ref=e66]

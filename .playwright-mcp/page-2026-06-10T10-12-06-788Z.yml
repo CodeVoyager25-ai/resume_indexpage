@@ -1,0 +1,5 @@
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - generic [ref=e6]: wttAndroid.space
+    - button "Toggle menu" [ref=e7]
+  - main [ref=e11]

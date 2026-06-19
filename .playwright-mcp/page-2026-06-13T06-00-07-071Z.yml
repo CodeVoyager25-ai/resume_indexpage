@@ -1,0 +1,109 @@
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - generic [ref=e6]:
+      - link [ref=e7] [cursor=pointer]:
+        - /url: /
+        - img [ref=e8]
+      - generic [ref=e10]: 个人简历
+    - generic [ref=e11]:
+      - navigation [ref=e12]:
+        - link "主页" [ref=e13] [cursor=pointer]:
+          - /url: /
+        - link "项目" [ref=e15] [cursor=pointer]:
+          - /url: /projects
+        - link "经历" [active] [ref=e16] [cursor=pointer]:
+          - /url: /experience
+          - text: 经历
+        - link "开源" [ref=e17] [cursor=pointer]:
+          - /url: /blog
+        - link "相册" [ref=e18] [cursor=pointer]:
+          - /url: /gallery
+      - button [ref=e19]:
+        - img [ref=e20]
+        - img [ref=e23]
+  - generic [ref=e26]:
+    - complementary [ref=e27]:
+      - generic [ref=e28]:
+        - img "aishaliwen" [ref=e30]
+        - heading "aishaliwen|" [level=2] [ref=e31]
+        - paragraph [ref=e32]: 嵌入式系统 / 物联网 / 边缘 AI 开发者
+        - generic [ref=e34]:
+          - link "GitHub" [ref=e35] [cursor=pointer]:
+            - /url: https://github.com/aishaliwen99
+            - img [ref=e36]
+          - link "Gitee" [ref=e38] [cursor=pointer]:
+            - /url: https://gitee.com/aishaliwen
+            - img [ref=e39]
+          - link "WeChat" [ref=e41] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e42]
+          - link "Email" [ref=e44] [cursor=pointer]:
+            - /url: mailto:aishaliwen@example.com
+            - img [ref=e45]
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - generic [ref=e50]: 技术方向
+            - generic [ref=e51]: 嵌入式 & 边缘AI
+          - generic [ref=e52]:
+            - generic [ref=e53]: 所在城市
+            - generic [ref=e54]: 广东深圳
+          - generic [ref=e55]:
+            - generic [ref=e56]: 当前身份
+            - generic [ref=e57]: 嵌入式开发者
+          - generic [ref=e58]:
+            - generic [ref=e59]: 核心技能
+            - generic [ref=e60]: C / RTOS / IoT
+          - generic [ref=e61]:
+            - generic [ref=e62]: 开源贡献
+            - generic [ref=e63]: 8+ 仓库活跃
+        - link "联系我" [ref=e64] [cursor=pointer]:
+          - /url: mailto:aishaliwen@example.com
+        - paragraph [ref=e65]: © 2026 aishaliwen.tech
+    - main [ref=e66]:
+      - generic [ref=e68]:
+        - generic [ref=e69]:
+          - generic [ref=e70]:
+            - generic [ref=e71]: 学习与实践历程
+            - generic [ref=e73]: "01"
+          - paragraph [ref=e74]: 我的学习成长与技术积累之路。
+          - generic [ref=e77]:
+            - generic [ref=e83] [cursor=pointer]:
+              - generic [ref=e84]: 2024 - 至今
+              - heading "嵌入式系统与边缘AI开发" [level=3] [ref=e85]
+              - paragraph [ref=e86]: 独立开发者 & 开源贡献者
+              - paragraph [ref=e87]: 专注于 STM32/ESP32 平台开发，探索 TinyML 与边缘推理在物联网中的应用。维护 8+ 个开源仓库，涵盖嵌入式驱动、传感器库与边缘计算工具。
+            - generic [ref=e93] [cursor=pointer]:
+              - generic [ref=e94]: 2023 - 2024
+              - heading "物联网系统集成与固件开发" [level=3] [ref=e95]
+              - paragraph [ref=e96]: 技术实验室 / 校企合作项目
+              - paragraph [ref=e97]: 参与智慧农业与环境监测 IoT 项目，负责终端传感器节点固件开发与 MQTT 数据上云。实现低功耗 BLE + LoRa 混合组网方案。
+            - generic [ref=e103] [cursor=pointer]:
+              - generic [ref=e104]: 2021 - 2023
+              - heading "嵌入式系统与C语言深入学习" [level=3] [ref=e105]
+              - paragraph [ref=e106]: 自学 & 导师指导
+              - paragraph [ref=e107]: 系统学习 ARM Cortex-M 架构、RTOS 内核原理与外设驱动开发。完成多个基于 FreeRTOS 的实战项目，深入理解中断、DMA 与低功耗设计。
+            - generic [ref=e113] [cursor=pointer]:
+              - generic [ref=e114]: 2019 - 2021
+              - heading "计算机基础与编程入门" [level=3] [ref=e115]
+              - paragraph [ref=e116]: 揭阳职业技术学院
+              - paragraph [ref=e117]: 主修计算机科学基础，掌握 C 语言、数据结构与算法。在校期间开始接触 Arduino/STM32 开发板，对嵌入式系统产生浓厚兴趣。
+        - generic [ref=e118]:
+          - heading "技术能力" [level=2] [ref=e120]
+          - generic [ref=e122]:
+            - generic [ref=e123] [cursor=pointer]:
+              - generic [ref=e125]:
+                - generic [ref=e126]: C / C++ 嵌入式编程
+                - generic [ref=e127]: 90%
+              - generic [ref=e131]:
+                - generic [ref=e132]: STM32 / ARM Cortex-M
+                - generic [ref=e133]: 85%
+              - generic [ref=e137]:
+                - generic [ref=e138]: RTOS (FreeRTOS / RT-Thread)
+                - generic [ref=e139]: 80%
+            - generic [ref=e142] [cursor=pointer]:
+              - generic [ref=e144]:
+                - generic [ref=e145]: IoT 协议 (MQTT / BLE / LoRa)
+                - generic [ref=e146]: 78%
+              - generic [ref=e150]:
+                - generic [ref=e151]: Python (数据处理 & 工具链)
+                - generic [ref=e152]: 72%

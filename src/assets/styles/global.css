@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+:root {
+  --color-space-bg: #050a0f;
+  --color-card-bg: rgba(8, 18, 28, 0.75);
+  --color-accent-primary: #22d3ee;
+  --color-accent-green: #6ee7b7;
+  --color-accent-purple: #a78bfa;
+  --border-glow: rgba(34, 211, 238, 0.07);
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+}
+
+/* Light theme overrides — 雾青浅绿 */
+html.light {
+  --color-space-bg: #ecf6ce;
+  --color-card-bg: rgba(255, 255, 255, 0.85);
+  --color-accent-primary: #6aada3;
+  --color-accent-green: #81bdb3;
+  --color-accent-purple: #bdd9bd;
+  --border-glow: rgba(129, 189, 179, 0.2);
+  --text-primary: #2a3630;
+  --text-secondary: #5a7568;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--color-space-bg);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  min-height: 100vh;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  position: relative;
+}
+
+/* Multi-layer aurora radial gradient background */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    /* Top-left aurora curtain - cyan-green */
+    radial-gradient(ellipse 800px 600px at 15% 10%, rgba(34, 211, 238, 0.06), transparent 70%),
+    /* Top-right aurora curtain - purple */
+    radial-gradient(ellipse 700px 500px at 75% 5%, rgba(167, 139, 250, 0.05), transparent 70%),
+    /* Mid-right aurora ribbon - green */
+    radial-gradient(ellipse 600px 400px at 85% 35%, rgba(110, 231, 183, 0.04), transparent 65%),
+    /* Bottom-left glow - cyan */
+    radial-gradient(ellipse 500px 500px at 10% 70%, rgba(34, 211, 238, 0.03), transparent 65%),
+    /* Center-ambient purple */
+    radial-gradient(ellipse 900px 700px at 50% 50%, rgba(167, 139, 250, 0.025), transparent 70%),
+    /* Bottom horizon glow */
+    radial-gradient(ellipse 1200px 300px at 50% 95%, rgba(110, 231, 183, 0.04), transparent 60%);
+}
+
+/* light mode: body 纵向渐变 + ::before 光斑 */
+html.light body {
+  background: linear-gradient(180deg, #d9eee7 0%, #e3f0db 25%, #ecf6ce 55%, #f2f9e4 100%);
+}
+html.light body::before {
+  background:
+    radial-gradient(ellipse 900px 600px at 8% 5%, rgba(129, 189, 173, 0.18), transparent 55%),
+    radial-gradient(ellipse 700px 500px at 88% 12%, rgba(188, 217, 188, 0.16), transparent 55%),
+    radial-gradient(ellipse 1000px 700px at 60% 55%, rgba(236, 246, 206, 0.2), transparent 60%),
+    radial-gradient(ellipse 600px 600px at 25% 80%, rgba(129, 189, 173, 0.08), transparent 55%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(34, 211, 238, 0.2); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(34, 211, 238, 0.35); }
+html.light ::-webkit-scrollbar-thumb { background: rgba(129, 189, 179, 0.28); }
+html.light ::-webkit-scrollbar-thumb:hover { background: rgba(129, 189, 179, 0.45); }
+
+/* Glassmorphism card */
+.glass-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--border-glow);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 16px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(34, 211, 238, 0.18);
+  box-shadow: 0 12px 40px rgba(34, 211, 238, 0.06), 0 0 80px rgba(167, 139, 250, 0.03);
+}
+html.light .glass-card:hover {
+  border-color: rgba(129, 189, 179, 0.45);
+  box-shadow: 0 8px 32px rgba(129, 189, 179, 0.1), 0 0 60px rgba(189, 217, 189, 0.08);
+}
+
+/* Section divider with dashed line and sequence number */
+.section-divider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+  margin: 24px 0;
+}
+.section-divider .divider-title {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.section-divider .dash-line {
+  flex: 1;
+  border-top: 1px dashed #1e293b;
+  min-width: 0;
+}
+html.light .section-divider .dash-line {
+  border-top-color: #a8cfa8;
+}
+.section-divider .seq-num {
+  font-family: 'Fira Code', 'Cascadia Code', monospace;
+  font-size: 13px;
+  color: #475569;
+  flex-shrink: 0;
+}
+html.light .section-divider .seq-num {
+  color: #81bdb3;
+}
+
+/* Typewriter cursor */
+.cursor-blink::after {
+  content: '|';
+  color: var(--color-accent-primary);
+  animation: blink 1s step-end infinite;
+  font-weight: 300;
+  font-family: 'Fira Code', monospace;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Aurora glow utility */
+.aurora-text {
+  background: linear-gradient(135deg, var(--color-accent-primary), var(--color-accent-green), var(--color-accent-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Code font */
+.font-code {
+  font-family: 'Fira Code', 'Cascadia Code', 'JetBrains Mono', monospace;
+}
+
+/* Particle canvas layer */
+#triangle-lost-in-space {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 64px);
+  z-index: 0;
+  pointer-events: none;
+}

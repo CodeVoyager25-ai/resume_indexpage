@@ -1,0 +1,51 @@
+- generic [ref=e4]:
+  - complementary [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - generic [ref=e9]: W
+        - generic [ref=e10]:
+          - heading "wttAndroid" [level=2] [ref=e11]
+          - paragraph [ref=e12]: 全栈开发者 / 技术爱好者
+      - generic [ref=e13]:
+        - generic [ref=e14]:
+          - generic [ref=e15]: 15+
+          - generic [ref=e16]: 项目
+        - generic [ref=e17]:
+          - generic [ref=e18]: 3+
+          - generic [ref=e19]: 年经验
+        - generic [ref=e20]:
+          - generic [ref=e21]: 50+
+          - generic [ref=e22]: 文章
+      - navigation [ref=e23]:
+        - list [ref=e24]:
+          - listitem [ref=e25]:
+            - button "🏠 首页" [ref=e26]:
+              - generic [ref=e27]: 🏠
+              - generic [ref=e28]: 首页
+          - listitem [ref=e29]:
+            - button "📂 项目" [ref=e30]:
+              - generic [ref=e31]: 📂
+              - generic [ref=e32]: 项目
+          - listitem [ref=e33]:
+            - button "📋 经历" [ref=e34]:
+              - generic [ref=e35]: 📋
+              - generic [ref=e36]: 经历
+          - listitem [ref=e37]:
+            - button "📝 博客" [ref=e38]:
+              - generic [ref=e39]: 📝
+              - generic [ref=e40]: 博客
+          - listitem [ref=e41]:
+            - button "🖼️ 相册" [ref=e42]:
+              - generic [ref=e43]: 🖼️
+              - generic [ref=e44]: 相册
+      - generic [ref=e45]:
+        - link "GitHub" [ref=e46] [cursor=pointer]:
+          - /url: https://github.com
+          - img [ref=e47]
+          - generic [ref=e49]: GitHub
+        - link "Email" [ref=e50] [cursor=pointer]:
+          - /url: mailto:wtt@example.com
+          - img [ref=e51]
+          - generic [ref=e53]: Email
+      - paragraph [ref=e54]: © 2026 wttAndroid.space
+  - main [ref=e55]

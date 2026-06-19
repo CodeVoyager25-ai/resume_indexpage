@@ -1,0 +1,130 @@
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - navigation [ref=e6]:
+      - button "首页" [ref=e7]: 首页
+      - button "项目" [ref=e9]
+      - button "经历" [ref=e10]
+      - button "博客" [ref=e11]
+      - button "相册" [ref=e12]
+    - button [ref=e14]:
+      - img [ref=e15]
+      - img [ref=e18]
+  - complementary [ref=e21]:
+    - generic [ref=e22]:
+      - generic [ref=e25]: W
+      - generic [ref=e26]:
+        - heading "wttAndroid|" [level=2] [ref=e27]
+        - paragraph [ref=e28]: 全栈开发者 / 技术爱好者
+      - generic [ref=e29]:
+        - link "GitHub" [ref=e30] [cursor=pointer]:
+          - /url: https://github.com
+          - img [ref=e31]
+        - link "Gitee" [ref=e33] [cursor=pointer]:
+          - /url: https://gitee.com
+          - img [ref=e34]
+        - link "Email" [ref=e36] [cursor=pointer]:
+          - /url: mailto:wtt@example.com
+          - img [ref=e37]
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - img [ref=e41]
+          - generic [ref=e44]: 某某重点大学
+        - generic [ref=e45]:
+          - img [ref=e46]
+          - generic [ref=e49]: 北京 / 上海
+        - generic [ref=e50]:
+          - img [ref=e51]
+          - generic [ref=e53]: 2024 级
+      - link "联系我" [ref=e54] [cursor=pointer]:
+        - /url: mailto:wtt@example.com
+      - paragraph [ref=e55]: © 2026 wttAndroid.space
+  - main [ref=e56]:
+    - generic [ref=e57]:
+      - generic [ref=e58]:
+        - generic [ref=e63]:
+          - paragraph [ref=e64]: "> hello_world.exe"
+          - heading "你好，我是 wttAndroid" [level=1] [ref=e65]
+          - paragraph [ref=e66]: 热爱技术的全栈开发者 / 专注于构建优雅、高性能的 Web 应用
+        - generic [ref=e67]:
+          - generic [ref=e69] [cursor=pointer]:
+            - text: 🚀
+            - generic [ref=e70]: 0+
+            - generic [ref=e71]: 完成项目
+          - generic [ref=e73] [cursor=pointer]:
+            - text: 💼
+            - generic [ref=e74]: 0+
+            - generic [ref=e75]: 年经验
+          - generic [ref=e77] [cursor=pointer]:
+            - text: 📝
+            - generic [ref=e78]: 0+
+            - generic [ref=e79]: 技术文章
+      - generic [ref=e80]:
+        - generic [ref=e81]:
+          - heading "我的能力" [level=2] [ref=e82]
+          - generic [ref=e84]: "03"
+        - generic [ref=e85]:
+          - generic [ref=e87] [cursor=pointer]:
+            - generic [ref=e88]:
+              - generic [ref=e89]: 🎨
+              - img [ref=e90]
+            - heading "UI 设计" [level=3] [ref=e92]
+            - paragraph [ref=e93]: 精美的用户界面设计，注重交互体验与视觉美学，提供高保真原型与设计规范。
+            - generic [ref=e94]:
+              - generic [ref=e95]: Figma
+              - generic [ref=e96]: Design System
+              - generic [ref=e97]: Prototype
+            - button "ORDER NOW →" [ref=e98]
+          - generic [ref=e100] [cursor=pointer]:
+            - generic [ref=e101]:
+              - generic [ref=e102]: 💻
+              - img [ref=e103]
+            - heading "网页制作" [level=3] [ref=e105]
+            - paragraph [ref=e106]: Vue 3 / React 驱动的响应式网页开发，高性能、可维护、SEO 友好。
+            - generic [ref=e107]:
+              - generic [ref=e108]: Vue 3
+              - generic [ref=e109]: React
+              - generic [ref=e110]: Tailwind CSS
+            - button "ORDER NOW →" [ref=e111]
+          - generic [ref=e113] [cursor=pointer]:
+            - generic [ref=e114]:
+              - generic [ref=e115]: ⚙️
+              - img [ref=e116]
+            - heading "后端开发" [level=3] [ref=e118]
+            - paragraph [ref=e119]: Node.js / Python RESTful API 与微服务架构，数据库设计与性能优化。
+            - generic [ref=e120]:
+              - generic [ref=e121]: Node.js
+              - generic [ref=e122]: Python
+              - generic [ref=e123]: PostgreSQL
+            - button "ORDER NOW →" [ref=e124]
+          - generic [ref=e126] [cursor=pointer]:
+            - generic [ref=e127]:
+              - generic [ref=e128]: 🏗️
+              - img [ref=e129]
+            - heading "全栈方案" [level=3] [ref=e131]
+            - paragraph [ref=e132]: 从需求分析到部署上线，提供完整的技术解决方案与高质量项目交付。
+            - generic [ref=e133]:
+              - generic [ref=e134]: Full Stack
+              - generic [ref=e135]: DevOps
+              - generic [ref=e136]: CI/CD
+            - button "ORDER NOW →" [ref=e137]
+      - generic [ref=e138]:
+        - generic [ref=e139]:
+          - heading "最近案例" [level=2] [ref=e140]
+          - generic [ref=e142]: "04"
+        - generic [ref=e143]:
+          - generic [ref=e147] [cursor=pointer]:
+            - generic [ref=e148]:
+              - heading "电商平台重构" [level=3] [ref=e149]
+              - generic [ref=e150]: 精选
+            - paragraph [ref=e151]: 使用 Vue 3 + Pinia 重构老旧的 jQuery 电商平台，性能提升 60%，用户转化率增长 25%。
+            - text: Vue 3 / Pinia / Tailwind CSS
+          - generic [ref=e155] [cursor=pointer]:
+            - heading "实时数据看板" [level=3] [ref=e157]
+            - paragraph [ref=e158]: 基于 WebSocket 的实时数据可视化仪表盘，支持百万级数据流畅渲染。
+            - text: React / D3.js / WebSocket
+          - generic [ref=e162] [cursor=pointer]:
+            - heading "移动端跨平台 App" [level=3] [ref=e164]
+            - paragraph [ref=e165]: 使用 uni-app 构建的跨平台移动应用，已上线 App Store 与各大安卓市场。
+            - text: uni-app / Vue 3 / Node.js
+        - link "查看全部案例 →" [ref=e167] [cursor=pointer]:
+          - /url: /projects

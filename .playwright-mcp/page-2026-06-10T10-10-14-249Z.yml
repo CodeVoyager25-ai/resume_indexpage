@@ -1,0 +1,126 @@
+- generic [ref=e4]:
+  - complementary [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - generic [ref=e9]: W
+        - generic [ref=e10]:
+          - heading "wttAndroid" [level=2] [ref=e11]
+          - paragraph [ref=e12]: 全栈开发者 / 技术爱好者
+      - generic [ref=e13]:
+        - generic [ref=e14]:
+          - generic [ref=e15]: 15+
+          - generic [ref=e16]: 项目
+        - generic [ref=e17]:
+          - generic [ref=e18]: 3+
+          - generic [ref=e19]: 年经验
+        - generic [ref=e20]:
+          - generic [ref=e21]: 50+
+          - generic [ref=e22]: 文章
+      - navigation [ref=e23]:
+        - list [ref=e24]:
+          - listitem [ref=e25]:
+            - button "🏠 首页" [ref=e26]:
+              - generic [ref=e27]: 🏠
+              - generic [ref=e28]: 首页
+          - listitem [ref=e29]:
+            - button "📂 项目" [ref=e30]:
+              - generic [ref=e31]: 📂
+              - generic [ref=e32]: 项目
+          - listitem [ref=e33]:
+            - button "📋 经历" [ref=e34]:
+              - generic [ref=e35]: 📋
+              - generic [ref=e36]: 经历
+          - listitem [ref=e37]:
+            - button "📝 博客" [ref=e38]:
+              - generic [ref=e39]: 📝
+              - generic [ref=e40]: 博客
+          - listitem [ref=e41]:
+            - button "🖼️ 相册" [ref=e42]:
+              - generic [ref=e43]: 🖼️
+              - generic [ref=e44]: 相册
+      - generic [ref=e45]:
+        - link "GitHub" [ref=e46] [cursor=pointer]:
+          - /url: https://github.com
+          - img [ref=e47]
+          - generic [ref=e49]: GitHub
+        - link "Email" [ref=e50] [cursor=pointer]:
+          - /url: mailto:wtt@example.com
+          - img [ref=e51]
+          - generic [ref=e53]: Email
+      - paragraph [ref=e54]: © 2026 wttAndroid.space
+  - main [ref=e55]:
+    - generic [ref=e57]:
+      - generic [ref=e58]:
+        - heading "项目展示" [level=1] [ref=e59]
+        - paragraph [ref=e60]: 我参与和独立完成的部分项目作品。
+      - generic [ref=e61]:
+        - button "全部" [ref=e62]
+        - button "Web" [ref=e63]
+        - button "移动端" [ref=e64]
+        - button "后端" [ref=e65]
+        - button "开源" [ref=e66]
+      - generic [ref=e67]:
+        - generic [ref=e69] [cursor=pointer]:
+          - generic [ref=e70]:
+            - generic [ref=e71]: 📁
+            - generic [ref=e72]:
+              - img [ref=e73]
+              - text: "328"
+          - heading "Vue Admin Dashboard" [level=3] [ref=e75]
+          - paragraph [ref=e76]: 基于 Vue 3 的企业级后台管理系统模板，内置权限管理、主题切换、国际化等常用功能。
+          - generic [ref=e77]:
+            - generic [ref=e78]: Web
+            - generic [ref=e79]: 开源
+        - generic [ref=e81] [cursor=pointer]:
+          - generic [ref=e82]:
+            - generic [ref=e83]: 📁
+            - generic [ref=e84]:
+              - img [ref=e85]
+              - text: "156"
+          - heading "CodeShare 代码分享平台" [level=3] [ref=e87]
+          - paragraph [ref=e88]: 支持实时协作的代码片段分享平台，支持多种语言语法高亮与实时预览。
+          - generic [ref=e89]:
+            - generic [ref=e90]: Web
+            - generic [ref=e91]: 后端
+        - generic [ref=e93] [cursor=pointer]:
+          - generic [ref=e94]:
+            - generic [ref=e95]: 📁
+            - generic [ref=e96]:
+              - img [ref=e97]
+              - text: "89"
+          - heading "Fitness Tracker App" [level=3] [ref=e99]
+          - paragraph [ref=e100]: 跨平台健身追踪应用，支持步数统计、运动记录、饮食管理等功能。
+          - generic [ref=e102]: 移动端
+        - generic [ref=e104] [cursor=pointer]:
+          - generic [ref=e105]:
+            - generic [ref=e106]: 📁
+            - generic [ref=e107]:
+              - img [ref=e108]
+              - text: "512"
+          - heading "Mini-Redis" [level=3] [ref=e110]
+          - paragraph [ref=e111]: 用 Go 语言实现的轻量级 Redis 兼容存储系统，支持多种数据结构。
+          - generic [ref=e112]:
+            - generic [ref=e113]: 后端
+            - generic [ref=e114]: 开源
+        - generic [ref=e116] [cursor=pointer]:
+          - generic [ref=e117]:
+            - generic [ref=e118]: 📁
+            - generic [ref=e119]:
+              - img [ref=e120]
+              - text: "203"
+          - heading "个人博客系统" [level=3] [ref=e122]
+          - paragraph [ref=e123]: 基于 Markdown 的静态博客生成器，支持自定义主题与 RSS 订阅。
+          - generic [ref=e124]:
+            - generic [ref=e125]: Web
+            - generic [ref=e126]: 开源
+        - generic [ref=e128] [cursor=pointer]:
+          - generic [ref=e129]:
+            - generic [ref=e130]: 📁
+            - generic [ref=e131]:
+              - img [ref=e132]
+              - text: "67"
+          - heading "WeChat Mini Program" [level=3] [ref=e134]
+          - paragraph [ref=e135]: 微信小程序电商模板，包含商品展示、购物车、下单支付完整流程。
+          - generic [ref=e136]:
+            - generic [ref=e137]: 移动端
+            - generic [ref=e138]: Web
