@@ -1,0 +1,12 @@
+[     386ms] [WARNING] [Vue Router warn]: uncaught error during route navigation: @ http://localhost:5173/node_modules/.vite/deps/vue-router.js?v=29ca16af:50
+[     386ms] [ERROR] Error: Invalid supabaseUrl: Must be a valid HTTP or HTTPS URL.
+    at validateSupabaseUrl (http://localhost:5173/node_modules/.vite/deps/@supabase_supabase-js.js?v=29ca16af:20778:49)
+    at new SupabaseClient (http://localhost:5173/node_modules/.vite/deps/@supabase_supabase-js.js?v=29ca16af:21006:21)
+    at createClient (http://localhost:5173/node_modules/.vite/deps/@supabase_supabase-js.js?v=29ca16af:21219:10)
+    at http://localhost:5173/src/utils/supabase.js:8:25 @ http://localhost:5173/node_modules/.vite/deps/vue-router.js?v=29ca16af:2106
+[     386ms] [WARNING] [Vue Router warn]: Unexpected error when starting the router: Error: Invalid supabaseUrl: Must be a valid HTTP or HTTPS URL.
+    at validateSupabaseUrl (http://localhost:5173/node_modules/.vite/deps/@supabase_supabase-js.js?v=29ca16af:20778:49)
+    at new SupabaseClient (http://localhost:5173/node_modules/.vite/deps/@supabase_supabase-js.js?v=29ca16af:21006:21)
+    at createClient (http://localhost:5173/node_modules/.vite/deps/@supabase_supabase-js.js?v=29ca16af:21219:10)
+    at http://localhost:5173/src/utils/supabase.js:8:25 @ http://localhost:5173/node_modules/.vite/deps/vue-router.js?v=29ca16af:50
+[   51683ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5173/@vite/client:963

@@ -11,6 +11,7 @@ const navItems = [
   { path: '/experience', label: '经历' },
   { path: '/blog', label: '开源' },
   { path: '/gallery', label: '相册' },
+  { path: '/guestbook', label: '留言' },
 ]
 
 function closeMenuAndNavigate() {

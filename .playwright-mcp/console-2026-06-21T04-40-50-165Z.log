@@ -1,0 +1,3 @@
+[    1755ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://ioklvhqwymxpomlfjove.supabase.co/rest/v1/rest/v1/messages?select=*&order=created_at.desc:0
+[    1756ms] [ERROR] 获取留言失败: Invalid path specified in request URL @ http://localhost:5173/src/components/Guestbook.vue:37
+[   20496ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5173/@vite/client:963

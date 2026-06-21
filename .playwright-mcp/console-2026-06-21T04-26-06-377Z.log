@@ -1,0 +1,2 @@
+[   11974ms] [WARNING] [Supabase] VITE_SUPABASE_URL 未配置或不是有效的 HTTP/HTTPS URL，留言功能暂不可用。 @ http://localhost:5173/src/utils/supabase.js:22
+[   45180ms] [WARNING] [Supabase] VITE_SUPABASE_URL 未配置或不是有效的 HTTP/HTTPS URL，留言功能暂不可用。 @ http://localhost:5173/src/utils/supabase.js:22
