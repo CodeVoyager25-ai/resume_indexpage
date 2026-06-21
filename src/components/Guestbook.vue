@@ -1,48 +1,90 @@
 <template>
-  <div class="guestbook-container">
-    <h2 class="title">💬 访客留言板 (免登录)</h2>
+  <div class="mb-12">
+    <!-- Section Divider -->
+    <div class="section-divider">
+      <span class="divider-title">访客留言</span>
+      <span class="dash-line" />
+      <span class="seq-num">05</span>
+    </div>
+    <p class="text-sm text-[var(--text-secondary)] mb-6 -mt-3 leading-relaxed">
+      无需登录，留下你的足迹吧 ✦
+    </p>
 
-    <form @submit.prevent="handleSubmit" class="message-form">
-      <div class="form-row">
-        <input
-          v-model="formData.nickname"
-          type="text"
-          placeholder="您的称呼（必填）"
-          required
-          class="form-input"
-        />
-        <input
-          v-model="formData.contact"
-          type="text"
-          placeholder="联系方式 (邮箱/微信，可选)"
-          class="form-input"
-        />
-      </div>
-      <textarea
-        v-model="formData.content"
-        placeholder="留点想对我说的话... (必填)"
-        required
-        rows="4"
-        class="form-textarea"
-      ></textarea>
-
-      <button type="submit" :disabled="submitting" class="submit-btn">
-        {{ submitting ? '正在发射...' : '提交留言' }}
-      </button>
-    </form>
-
-    <div class="message-list">
-      <div v-if="supabaseError" class="status-tip error-tip">{{ supabaseError }}</div>
-      <div v-else-if="loading" class="status-tip">正在努力加载留言...</div>
-      <div v-else-if="messages.length === 0" class="status-tip">目前还没有留言，快来坐个沙发吧~</div>
-
-      <div v-else v-for="msg in messages" :key="msg.id" class="message-card">
-        <div class="card-header">
-          <span class="nickname">👤 {{ msg.nickname }}</span>
-          <span class="time">{{ formatDate(msg.created_at) }}</span>
+    <!-- Message Form (glass card) -->
+    <div class="glass-card p-6 mb-10">
+      <form @submit.prevent="handleSubmit" class="flex flex-col gap-4">
+        <div class="flex gap-4">
+          <input
+            v-model="formData.nickname"
+            type="text"
+            placeholder="您的称呼（必填）"
+            required
+            class="guest-input"
+          />
+          <input
+            v-model="formData.contact"
+            type="text"
+            placeholder="联系方式 (可选)"
+            class="guest-input"
+          />
         </div>
-        <div v-if="msg.contact" class="contact-tag">联系方式: {{ msg.contact }}</div>
-        <p class="content">{{ msg.content }}</p>
+        <textarea
+          v-model="formData.content"
+          placeholder="留点想对我说的话... (必填)"
+          required
+          rows="4"
+          class="guest-input guest-textarea"
+        ></textarea>
+
+        <div class="flex items-center gap-3 mt-1">
+          <button
+            type="submit"
+            :disabled="submitting"
+            class="inline-flex items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-sm font-medium transition-all duration-300 hover:-translate-y-0.5"
+            :class="submitting
+              ? 'opacity-50 cursor-not-allowed bg-white/5 text-[var(--text-secondary)]'
+              : 'bg-gradient-to-r from-[#00B4D8] to-[#00B4D8]/70 text-white shadow-lg shadow-[#00B4D8]/20 hover:shadow-[#00B4D8]/40'"
+          >
+            {{ submitting ? '正在发射...' : '提交留言' }}
+          </button>
+          <span class="text-xs text-[var(--text-secondary)]">免登录 · 即刻留言</span>
+        </div>
+      </form>
+    </div>
+
+    <!-- Separator between form and messages -->
+    <div v-if="!loading && messages.length > 0 && !supabaseError" class="flex items-center gap-4 mb-6">
+      <span class="text-xs font-code text-[var(--color-accent-primary)]">MESSAGES</span>
+      <span class="flex-1 h-[1px]" :style="{ background: 'linear-gradient(90deg, var(--color-accent-primary), transparent)' }" />
+    </div>
+
+    <!-- Error / Loading / Empty States -->
+    <div v-if="supabaseError" class="glass-card p-6 text-center">
+      <p class="text-[var(--text-secondary)] text-sm">{{ supabaseError }}</p>
+    </div>
+    <div v-else-if="loading" class="glass-card p-6 text-center">
+      <p class="text-[var(--text-secondary)] text-sm animate-pulse">正在加载留言...</p>
+    </div>
+    <div v-else-if="messages.length === 0" class="glass-card p-6 text-center">
+      <p class="text-[var(--text-secondary)] text-sm">目前还没有留言，快来坐个沙发吧~</p>
+    </div>
+
+    <!-- Message List -->
+    <div v-else class="flex flex-col gap-5">
+      <div v-for="msg in messages" :key="msg.id" class="message-card">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-base font-semibold text-[var(--text-primary)]">{{ msg.nickname }}</span>
+          <span class="text-xs font-code text-[var(--text-secondary)]">{{ formatDate(msg.created_at) }}</span>
+        </div>
+        <div v-if="msg.contact" class="mb-3">
+          <span
+            class="text-xs px-2 py-0.5 rounded-md border"
+            :style="{ background: 'rgba(34,211,238,0.06)', color: 'var(--color-accent-primary)', borderColor: 'rgba(34,211,238,0.12)' }"
+          >
+            {{ msg.contact }}
+          </span>
+        </div>
+        <p class="text-[var(--text-primary)] text-sm leading-relaxed whitespace-pre-wrap m-0">{{ msg.content }}</p>
       </div>
     </div>
   </div>
@@ -129,21 +171,68 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.guestbook-container { max-width: 700px; margin: 40px auto; padding: 20px; font-family: sans-serif; }
-.title { font-size: 1.5rem; margin-bottom: 20px; color: #333; }
-.message-form { display: flex; flex-direction: column; gap: 15px; margin-bottom: 40px; background: #f9f9f9; padding: 20px; border-radius: 8px; border: 1px solid #eee; }
-.form-row { display: flex; gap: 15px; }
-.form-input { flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 0.95rem; }
-.form-textarea { padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 0.95rem; resize: vertical; }
-.submit-btn { padding: 12px; background: #0070f3; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 1rem; font-weight: bold; transition: background 0.2s; }
-.submit-btn:hover { background: #0051cb; }
-.submit-btn:disabled { background: #ccc; cursor: not-allowed; }
-.status-tip { text-align: center; color: #999; font-style: italic; margin-top: 20px; }
-.error-tip { color: #e74c3c; }
-.message-card { background: white; border: 1px solid #eee; padding: 15px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
-.card-header { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; }
-.nickname { font-weight: bold; color: #222; }
-.time { color: #999; }
-.contact-tag { font-size: 0.8rem; color: #0070f3; background: #e6f0ff; display: inline-block; padding: 2px 6px; border-radius: 4px; margin-bottom: 8px; }
-.content { color: #444; line-height: 1.6; margin: 0; white-space: pre-wrap; }
+.guest-input {
+  flex: 1;
+  padding: 10px 14px;
+  background: var(--color-card-bg);
+  border: 1px solid var(--border-glow);
+  border-radius: 12px;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.guest-input:focus {
+  border-color: var(--color-accent-primary);
+  box-shadow: 0 0 0 2px rgba(34, 211, 238, 0.08);
+}
+html.light .guest-input:focus {
+  box-shadow: 0 0 0 2px rgba(129, 189, 179, 0.15);
+}
+.guest-input::placeholder {
+  color: var(--text-secondary);
+}
+.guest-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.message-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--border-glow);
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+  padding: 18px 20px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s, box-shadow 0.35s, border-color 0.35s;
+}
+.message-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(34, 211, 238, 0.18);
+  box-shadow: 0 12px 40px rgba(34,211,238,0.06), 0 0 80px rgba(167,139,250,0.03);
+}
+html.light .message-card:hover {
+  border-color: rgba(129,189,179,0.45);
+  box-shadow: 0 8px 32px rgba(129,189,179,0.1), 0 0 60px rgba(129,189,179,0.04);
+}
+.message-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  border-radius: 0 2px 2px 0;
+  background: linear-gradient(180deg, var(--color-accent-primary), var(--color-accent-green));
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+.message-card:hover::before {
+  opacity: 1;
+}
+html.light .message-card::before {
+  background: linear-gradient(180deg, var(--color-accent-primary), var(--color-accent-green));
+  opacity: 0.5;
+}
 </style>
