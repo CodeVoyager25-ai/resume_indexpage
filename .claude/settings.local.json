@@ -15,7 +15,10 @@
       "mcp__plugin_playwright_playwright__browser_wait_for",
       "Bash(netstat:*)",
       "Bash(taskkill:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(git rm:*)",
+      "Bash(git add:*)",
+      "Bash(git push:*)"
     ]
   }
 }
