@@ -17,7 +17,7 @@ export const infoItems = [
   { label: '所在城市', value: '广东揭阳' },
   { label: '当前身份', value: '嵌入式开发者' },
   { label: '核心技能', value: 'C / RTOS / IoT' },
-  { label: '开源贡献', value: '8+ 仓库活跃' },
+  { label: '开源贡献', value: '6+ 仓库活跃' },
 ]
 
 export const socialLinks = [
@@ -44,8 +44,8 @@ export const socialLinks = [
 ]
 
 export const heroStats = [
-  { target: 3, suffix: '+', label: '核心项目', icon: '🖥️' },
-  { target: 8, suffix: '+', label: '开源仓库', icon: '📦' },
+  { target: 6, suffix: '', label: '核心项目', icon: '🖥️' },
+  { target: 6, suffix: '+', label: '开源仓库', icon: '📦' },
   { target: 100, suffix: '%', label: '源码交付', icon: '🔧' },
 ]
 
@@ -77,7 +77,7 @@ export const timelineItems = [
     year: '2024 - 至今',
     title: '嵌入式系统与边缘AI开发',
     company: '独立开发者 & 开源贡献者',
-    desc: '专注于 STM32/ESP32 平台开发，探索 TinyML 与边缘推理在物联网中的应用。维护 8+ 个开源仓库，涵盖嵌入式驱动、传感器库与边缘计算工具。',
+    desc: '专注于 STM32/ESP32 平台开发，探索 TinyML 与边缘推理在物联网中的应用。维护 6+ 个开源仓库，涵盖嵌入式驱动、传感器库与边缘计算工具。',
     type: 'work',
   },
   {
@@ -170,27 +170,32 @@ export const githubRepos = [
 
 export const cases = [
   {
-    title: '智慧农业环境监测系统',
-    desc: '基于 STM32L0 + LoRa 的低功耗无线传感网络，实时采集土壤湿度、温湿度与光照数据，通过 MQTT 上报云端实现远程监控与告警。',
-    tech: 'STM32 / LoRa / MQTT / ThingsBoard',
+    title: 'MimiClaw 全栈 AI 开源项目',
+    desc: '核心发起人。对接 DeepSeek API，通过 MCP 协议实现大模型硬件控制；WSL2+VsCode 搭建开发环境，项目 GitHub 开源。全程使用 VsCode+Claude Code(CLI) 辅助开发提效。',
+    tech: 'AI / 全栈 / 开源 / 嵌入式',
     tag: '精选',
   },
   {
-    title: 'ESP32-S3 边缘手势识别',
-    desc: '在 ESP32-S3 上部署 TensorFlow Lite Micro 模型，通过 IMU 传感器实现实时手势识别，延迟低于 50ms，功耗控制在 150mW 以内。',
-    tech: 'ESP32-S3 / TinyML / IMU / FreeRTOS',
+    title: '电商决策辅助系统',
+    desc: 'Python + Flask 搭建后端，基于 SQLite 设计原子状态机与幂等机制；集成 GLM-4 API 实现评论情感分析，并使用 Jinja2 渲染数据看板。',
+    tech: 'AI / Web / 后端',
   },
   {
-    title: 'BLE-MQTT 智能网关',
-    desc: '运行于 Linux/OpenWrt 的协议桥接网关，支持多个 BLE 传感器设备自动发现、数据聚合与 MQTT 上报，已稳定运行超 6 个月。',
-    tech: 'Python / BLE (BlueZ) / MQTT / OpenWrt',
+    title: 'AI 原型自动化部署实践',
+    desc: '依托 Google AI Studio 生成前端代码，接入 Vercel 实现 CI/CD 自动部署, DNS 解析由 Cloudflare 提供；沉淀 AI 驱动的敏捷交付工作流。',
+    tech: 'AI / Web / DevOps',
+  },
+  {
+    title: '个人技术作品集网站',
+    desc: 'Vue3+Vite+Tailwind CSS v4 搭建 SPA 站点，集成 Vue Router、Pinia，实现 5 个路由页面与明暗主题切换；Claude Code +Cursor 辅助开发。',
+    tech: 'Web / Vue',
   },
 ]
 
 export const projectGridItems = [
   {
     title: '2026.05-06 · MimiClaw 全栈 AI 开源项目',
-    desc: '核心发起人。对接 DeepSeek API，通过 MCP 协议实现大模型硬件控制；基于 WSL2 + Docker 搭建开发环境，并将项目开源到 GitHub。',
+    desc: '核心发起人。对接 DeepSeek API，通过 MCP 协议实现大模型硬件控制；WSL2+VsCode 搭建开发环境，项目 GitHub 开源。全程使用 VsCode+Claude Code(CLI) 辅助开发提效。',
     tags: ['AI', '全栈', '开源', '嵌入式'],
     stars: 0,
   },
@@ -202,13 +207,13 @@ export const projectGridItems = [
   },
   {
     title: '2026.03-04 · AI 原型自动化部署实践',
-    desc: '依托 Google AI Studio 生成前端代码，接入 Vercel 实现 CI/CD 自动部署与域名配置，沉淀 AI 驱动的敏捷交付工作流。',
+    desc: '依托 Google AI Studio 生成前端代码，接入 Vercel 实现 CI/CD 自动部署,DNS解析由Cloudflare提供；沉淀 AI 驱动的敏捷交付工作流。 网址：--https://aishaliwen.eu.cc',
     tags: ['AI', 'Web', 'DevOps'],
     stars: 0,
   },
   {
     title: '2026.02-03 · 个人技术作品集网站',
-    desc: 'Vue3 + Vite + Tailwind CSS v4 搭建 SPA 站点，集成 Vue Router、Pinia，实现 5 个路由页面与明暗主题切换，并使用 Claude Code CLI 辅助开发。',
+    desc: 'Vue3+Vite+Tailwind CSS v4 搭建 SPA 站点，集成 Vue Router、Pinia，实现 5 个路由页面与明暗主题切换；Claude Code +Cursor 辅助开发。网址：--https://resume.aishaliwen.eu.cc',
     tags: ['Web', 'Vue'],
     stars: 0,
   },

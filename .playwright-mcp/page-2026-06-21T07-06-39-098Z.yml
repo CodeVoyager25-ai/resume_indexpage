@@ -1,0 +1,64 @@
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - generic [ref=e6]:
+      - link [ref=e7] [cursor=pointer]:
+        - /url: /
+        - img [ref=e8]
+      - generic [ref=e10]: 个人简历
+    - generic [ref=e11]:
+      - navigation [ref=e12]:
+        - link "主页" [ref=e13] [cursor=pointer]:
+          - /url: /
+          - text: 主页
+        - link "项目" [ref=e15] [cursor=pointer]:
+          - /url: /projects
+        - link "经历" [ref=e16] [cursor=pointer]:
+          - /url: /experience
+        - link "开源" [ref=e17] [cursor=pointer]:
+          - /url: /blog
+        - link "相册" [ref=e18] [cursor=pointer]:
+          - /url: /gallery
+        - link "留言" [ref=e19] [cursor=pointer]:
+          - /url: /guestbook
+      - button [ref=e20]:
+        - img [ref=e21]
+        - img [ref=e24]
+  - generic [ref=e27]:
+    - complementary [ref=e28]:
+      - generic [ref=e29]:
+        - img "liwen Li" [ref=e31]
+        - heading "wenzheng Li|" [level=2] [ref=e32]
+        - paragraph [ref=e33]: 嵌入式系统 / 物联网 / 边缘 AI 开发者
+        - generic [ref=e35]:
+          - link "GitHub" [ref=e36] [cursor=pointer]:
+            - /url: https://github.com/CodeVoyager25-ai
+            - img [ref=e37]
+          - link "Gitee" [ref=e39] [cursor=pointer]:
+            - /url: https://gitee.com/aishaliwen
+            - img [ref=e40]
+          - link "WeChat" [ref=e42] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e43]
+          - link "Email" [ref=e45] [cursor=pointer]:
+            - /url: mailto:aishaliwen22@gmail.com
+            - img [ref=e46]
+        - generic [ref=e49]:
+          - generic [ref=e50]:
+            - generic [ref=e51]: 技术方向
+            - generic [ref=e52]: 嵌入式 & 边缘AI
+          - generic [ref=e53]:
+            - generic [ref=e54]: 所在城市
+            - generic [ref=e55]: 广东揭阳
+          - generic [ref=e56]:
+            - generic [ref=e57]: 当前身份
+            - generic [ref=e58]: 嵌入式开发者
+          - generic [ref=e59]:
+            - generic [ref=e60]: 核心技能
+            - generic [ref=e61]: C / RTOS / IoT
+          - generic [ref=e62]:
+            - generic [ref=e63]: 开源贡献
+            - generic [ref=e64]: 6+ 仓库活跃
+        - link "联系我" [ref=e65] [cursor=pointer]:
+          - /url: mailto:aishaliwen@example.com
+        - paragraph [ref=e66]: © 2026 aishaliwen22@gmail.com
+    - main [ref=e67]
