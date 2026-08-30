@@ -13,28 +13,41 @@
     <!-- Message Form (glass card) -->
     <div class="glass-card p-6 mb-10">
       <form @submit.prevent="handleSubmit" class="flex flex-col gap-4">
-        <div class="flex gap-4">
+        <div class="flex gap-4 form-row">
           <input
+            id="guest-nickname"
             v-model="formData.nickname"
+            name="nickname"
             type="text"
             placeholder="您的称呼（必填）"
             required
+            maxlength="40"
             class="guest-input"
           />
           <input
+            id="guest-contact"
             v-model="formData.contact"
+            name="contact"
             type="text"
             placeholder="联系方式 (可选)"
+            maxlength="120"
             class="guest-input"
           />
         </div>
         <textarea
+          id="guest-content"
           v-model="formData.content"
+          name="content"
           placeholder="留点想对我说的话... (必填)"
           required
+          maxlength="500"
           rows="4"
           class="guest-input guest-textarea"
         ></textarea>
+
+        <div v-if="submitError" class="text-xs text-red-300">
+          {{ submitError }}
+        </div>
 
         <div class="flex items-center gap-3 mt-1">
           <button
@@ -53,14 +66,14 @@
     </div>
 
     <!-- Separator between form and messages -->
-    <div v-if="!loading && messages.length > 0 && !supabaseError" class="flex items-center gap-4 mb-6">
+    <div v-if="!loading && messages.length > 0 && !guestbookError" class="flex items-center gap-4 mb-6">
       <span class="text-xs font-code text-[var(--color-accent-primary)]">MESSAGES</span>
       <span class="flex-1 h-[1px]" :style="{ background: 'linear-gradient(90deg, var(--color-accent-primary), transparent)' }" />
     </div>
 
     <!-- Error / Loading / Empty States -->
-    <div v-if="supabaseError" class="glass-card p-6 text-center">
-      <p class="text-[var(--text-secondary)] text-sm">{{ supabaseError }}</p>
+    <div v-if="guestbookError" class="glass-card p-6 text-center">
+      <p class="text-[var(--text-secondary)] text-sm">{{ guestbookError }}</p>
     </div>
     <div v-else-if="loading" class="glass-card p-6 text-center">
       <p class="text-[var(--text-secondary)] text-sm animate-pulse">正在加载留言...</p>
@@ -92,12 +105,12 @@
 
 <script setup>
 import { ref, reactive, onMounted } from 'vue'
-import { getSupabase } from '../utils/supabase'
 
 const messages = ref([])
 const loading = ref(true)
 const submitting = ref(false)
-const supabaseError = ref(null)
+const guestbookError = ref(null)
+const submitError = ref(null)
 
 const formData = reactive({
   nickname: '',
@@ -105,56 +118,51 @@ const formData = reactive({
   content: ''
 })
 
-const fetchMessages = async () => {
-  const supabase = getSupabase()
-  if (!supabase) {
-    supabaseError.value = '留言服务暂未配置，请联系站长。'
-    loading.value = false
-    return
+const requestJson = async (url, options) => {
+  const response = await fetch(url, options)
+  const data = await response.json().catch(() => null)
+
+  if (!response.ok) {
+    throw new Error(data?.error || `请求失败 (${response.status})`)
   }
+
+  return data
+}
+
+const fetchMessages = async () => {
   try {
     loading.value = true
-    const { data, error } = await supabase
-      .from('messages')
-      .select('*')
-      .order('created_at', { ascending: false })
-
-    if (error) throw error
-    messages.value = data
+    guestbookError.value = null
+    messages.value = await requestJson('/api/messages')
   } catch (err) {
     console.error('获取留言失败:', err.message)
-    supabaseError.value = '加载留言失败，请稍后刷新重试。'
+    guestbookError.value = '加载留言失败，请稍后刷新重试。'
   } finally {
     loading.value = false
   }
 }
 
 const handleSubmit = async () => {
-  const supabase = getSupabase()
-  if (!supabase) {
-    alert('留言服务暂未配置')
-    return
-  }
   try {
     submitting.value = true
-    const { error } = await supabase
-      .from('messages')
-      .insert([
-        {
-          nickname: formData.nickname,
-          contact: formData.contact,
-          content: formData.content
-        }
-      ])
+    submitError.value = null
 
-    if (error) throw error
+    await requestJson('/api/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        nickname: formData.nickname,
+        contact: formData.contact,
+        content: formData.content
+      })
+    })
 
     formData.content = ''
     await fetchMessages()
     alert('留言成功！感谢留下痕迹 🚀')
   } catch (err) {
     console.error('提交留言失败:', err.message)
-    alert('留言失败，请稍后再试')
+    submitError.value = err.message || '留言失败，请稍后再试。'
   } finally {
     submitting.value = false
   }
@@ -234,5 +242,11 @@ html.light .message-card:hover {
 html.light .message-card::before {
   background: linear-gradient(180deg, var(--color-accent-primary), var(--color-accent-green));
   opacity: 0.5;
+}
+
+@media (max-width: 640px) {
+  .form-row {
+    flex-direction: column;
+  }
 }
 </style>
