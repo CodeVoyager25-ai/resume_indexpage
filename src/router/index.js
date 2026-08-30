@@ -31,11 +31,18 @@ const routes = [
     name: 'Guestbook',
     component: () => import('../views/GuestbookPage.vue'),
   },
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: '/',
+  },
 ]
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior() {
+    return { top: 0 }
+  },
 })
 
 export default router
